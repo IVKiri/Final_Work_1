@@ -19,9 +19,17 @@ for (int i = 0; i < array.Length; i++)
         element++;
     }
 }
-Console.Write("Новый массив с элементами длиной 3 или менее символов: [");
-for (int i = 0; i < element - 1; i++)
+if (element > 0)
 {
-    Console.Write($"{result[i]}, ");
+    Console.Write("Новый массив с элементами длиной 3 или менее символов: [");
+    for (int i = 0; i < element - 1; i++)
+    {
+        Console.Write($"{result[i]}, ");
+    }
+    Console.Write($"{result[element - 1]}]");
 }
-Console.Write($"{result[element - 1]}]");
+else
+{
+    Console.WriteLine("в массиве нет строк длиной 3 или менее символов");
+}
+
